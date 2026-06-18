@@ -1,4 +1,4 @@
-##Aathman Loader
+## Aathman Loader
 
 Aathman Loader is a trust-aware model loading gate that ensures a machine-learning model is executed only after passing all declared trust checks.
 
@@ -12,7 +12,7 @@ If the answer is no, the model is not loaded.
 
 ---
 
-##What Aathman Loader Does
+## What Aathman Loader Does
 
 Aathman Loader orchestrates four sequential trust checks before loading a model:
 
@@ -32,7 +32,7 @@ If any stage fails, loading is blocked and a structured error is raised.
 
 ---
 
-##Position in the Aathman Architecture
+## Position in the Aathman Architecture
 
 Aathman Loader does not implement trust logic itself.
 It imports and composes the other Aathman components.
@@ -47,7 +47,7 @@ This separation keeps the system minimal, auditable, and extensible.
 
 ---
 
-##What Aathman Loader Does NOT Do
+## What Aathman Loader Does NOT Do
 
 Aathman Loader intentionally avoids:
 
@@ -67,7 +67,7 @@ Its scope is narrow by design: trust enforcement at load time.
 
 ---
 
-##Repository Contents
+## Repository Contents
 
 aathman-loader/
 
@@ -88,7 +88,7 @@ Only loader.py and errors.py are required for functionality.
 
 ---
 
-##How Loader Works (Execution Order)
+## How Loader Works (Execution Order)
 
 1. Identity Verification
 
@@ -104,7 +104,7 @@ Failure at this stage stops execution immediately.
 
 ---
 
-##2. Policy Enforcement (PaCM)
+## 2. Policy Enforcement (PaCM)
 
 Applies a policy file defining:
 
@@ -118,7 +118,7 @@ Policy decisions are explicit and deterministic.
 
 ---
 
-##3. Intent Enforcement (MTM)
+## 3. Intent Enforcement (MTM)
 
 Validates and enforces the model’s declared intent, such as:
 
@@ -132,13 +132,13 @@ Declared constraints are enforced as hard gates.
 
 ---
 
-##4. Model Loading
+## 4. Model Loading
 
 Only after all trust checks pass is the model loaded via torch.load.
 
 ---
 
-##Error Handling Model
+## Error Handling Model
 
 All failures raise a single exception type:
 
@@ -161,7 +161,7 @@ This makes failures predictable and machine-readable.
 
 ---
 
-##Demo Usage
+## Demo Usage
 
 A demonstration script is included.
 
@@ -183,7 +183,7 @@ This is intended for testing and interviews, not production.
 
 ---
 
-##Dependencies
+## Dependencies
 
 Aathman Loader depends on the following sibling repositories:
 
@@ -200,7 +200,7 @@ Future packaging may consolidate this structure.
 
 ---
 
-##Security Model
+## Security Model
 
 Aathman Loader assumes:
 
@@ -216,14 +216,14 @@ If trust cannot be established, execution is denied.
 
 ---
 
-##License
+## License
 
 Aathman Loader is licensed under the Apache License 2.0.
 See LICENSE for full terms.
 
 ---
 
-##Contributing
+## Contributing
 
 Contributions are welcome.
 
@@ -232,7 +232,7 @@ See CLA.md for details.
 
 ---
 
-##Final Note
+## Final Note
 
 Aathman Loader is intentionally small.
 
