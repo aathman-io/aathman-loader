@@ -223,15 +223,6 @@ See LICENSE for full terms.
 
 ---
 
-## Contributing
-
-Contributions are welcome.
-
-All contributors must sign the Contributor License Agreement (CLA) before code can be merged.
-See CLA.md for details.
-
----
-
 ## Final Note
 
 Aathman Loader is intentionally small.
