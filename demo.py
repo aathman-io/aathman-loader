@@ -1,14 +1,10 @@
 from loader import trust_load
 from errors import TrustViolationError
 
-# ------------------------------------------------------------------
-# Demo configuration
-# ------------------------------------------------------------------
-
 MODEL_PATH = "model.pth"
 CERT_PATH = "model.pth.aathman.json"
 POLICY_PATH = "policy.yaml"
-MTM_PATH = "model.mtm.yaml"   # Set to None to skip MTM
+MTM_PATH = "model.mtm.yaml"  
 
 
 def main():
